@@ -5,9 +5,9 @@ var express = require('express');
 var app = express();
 app.use(express.static('public'));
 app.get('/', function (req, res) {
-    //res.redirect('./index.html');
+    res.render('index.html');
 })
-
-app.listen(3000, function () {
+//process.env.PORT,process.env.IP
+app.listen(process.env.PORT,process.env.IP, function () {
     console.log("OK!!");
 })
