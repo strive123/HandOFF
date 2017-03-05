@@ -110,6 +110,9 @@ fieldset[disabled] .btn-primary.active {
   font-size: 18px;
   padding: 20px 40px;
 }
+#signup {
+  text-transform: none;
+}
 .btn-xl:hover,
 .btn-xl:focus,
 .btn-xl:active,
@@ -250,7 +253,7 @@ header .intro-text .intro-lead-in {
 }
 header .intro-text .intro-heading {
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  text-transform: uppercase;
+  /*text-transform: uppercase;*/
   font-weight: 700;
   font-size: 50px;
   line-height: 50px;
@@ -270,7 +273,7 @@ header .intro-text .intro-heading {
   }
   header .intro-text .intro-heading {
     font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    //text-transform: uppercase;
+    /*text-transform: uppercase;*/
     font-weight: 700;
     font-size: 75px;
     line-height: 75px;
@@ -605,6 +608,8 @@ section#contact :-ms-input-placeholder {
   font-weight: 700;
   color: #eeeeee;
 }
+
+
 section#contact .text-danger {
   color: #e74c3c;
 }
