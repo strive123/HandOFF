@@ -18,7 +18,7 @@ app.get('/', function (req, res) {
 })
 
 // facebook and google sheet
-app.get('/fbags', function (req, res) {
+app.post('/fbags', function (req, res) {
     var postId = getParameter("fbid",req.body.link);
     res.render("getLink",{postId:postId});
 
