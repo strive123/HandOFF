@@ -26,7 +26,7 @@ app.post('/fbags', function (req, res) {
 
 app.get("/callback", function(req,res){
     var code = req.query.code;
-    console.log("request");
+    console.log("vo call back google");
     console.log(req);
     google.getNewToken(code,function(auth) {
         google.spreadsheet(auth, cmtArray, function (url) {
@@ -37,6 +37,7 @@ app.get("/callback", function(req,res){
 })
 // facebook cmt post
 app.post('/fcp', function (req, res) {
+    console.log('vo fcp');
     var cmt = req.body.data;
     var len = cmt.length;
     var i=0;
@@ -44,6 +45,7 @@ app.post('/fcp', function (req, res) {
     for (; i<len;i++){
         cmtArray.push([cmt[i].message]);
     }
+    console.log(cmt);
     google.run();
 })
 //process.env.PORT,process.env.IP

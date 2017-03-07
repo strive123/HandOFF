@@ -29,7 +29,7 @@ module.exports = {
         },
 
     run: function ()  {
-
+            console.log("da chay ham run");
             opn(authUrl);
         },
 
