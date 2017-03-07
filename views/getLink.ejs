@@ -25,7 +25,14 @@
                                 method : "POST",
                                 url: 'fcp',
                                 data: response,
-                                dataType: 'json'
+                                dataType: 'json',
+                                success: function(result) {
+                                    alert(result);
+                                },
+                                error: function(result){
+                                    alert(result);
+
+                                }
                             });
                             //}
                         }
