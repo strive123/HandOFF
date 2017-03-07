@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Comment Tools</title>
+    <script type="text/javascript" src="fbscript.js"> </script>
+    <script type="text/javascript" src="fbscript.js"> </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"> </script>
+</head>
+<body>
+
+    <script>
+        function login () {
+            FB.login(function (response) {
+                if (response.authResponse) {
+                    var myaccess_token = FB.getAuthResponse()['acessToken'];
+                    console.log('Access Token = ' + myaccess_token);
+                    var userId = FB.getAuthResponse()['userID'];
+                    FB.api(
+                        "/"+userId+ "_<%=postId%>/comments",
+                        'get',
+                        { "access_token" : myaccess_token} ,
+                        function (response) {
+                            //if (response && !response.error) {
+                            $.ajax({
+                                type: 'POST',
+                                url: 'fcp',
+                                data: response,
+                                dataType: 'json'
+                            });
+                            //}
+                        }
+                    )
+                }
+            }, {scope: 'user_posts, public_profile'});
+        }
+   </script>
+    <button onclick="login()">Click me to see result</button>
+
+</body>
+</html>

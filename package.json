@@ -30,6 +30,11 @@
     "url": "https://github.com/strive123/HandOFF.git"
   },
   "dependencies": {
-    "express": "^4.15.0"
+    "body-parser": "^1.17.0",
+    "ejs": "^2.5.6",
+    "express": "^4.15.0",
+    "google-auth-library": "^0.10.0",
+    "googleapis": "^17.1.0",
+    "opn": "^4.0.2"
   }
 }
