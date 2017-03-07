@@ -4,6 +4,7 @@
     <list default="true" id="7f031d0e-77ec-49c8-9bf1-ac284d3451c6" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/getLink.ejs" afterPath="$PROJECT_DIR$/views/getLink.ejs" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -56,8 +57,8 @@
       <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="274">
-              <caret line="50" column="2" lean-forward="false" selection-start-line="50" selection-start-column="2" selection-end-line="50" selection-end-column="2" />
+            <state relative-caret-position="250">
+              <caret line="51" column="2" lean-forward="false" selection-start-line="51" selection-start-column="2" selection-end-line="51" selection-end-column="2" />
               <folding>
                 <element signature="e#440#476#0" expanded="false" />
               </folding>
@@ -100,11 +101,9 @@
       <file leaf-file-name="getLink.ejs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/getLink.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
+            <state relative-caret-position="24">
               <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-              <folding>
-                <element signature="e#900#1559#0#HTML" expanded="false" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -179,8 +178,8 @@
         <option value="$PROJECT_DIR$/js/fbscript.js" />
         <option value="$PROJECT_DIR$/public/assets/css/style.css" />
         <option value="$PROJECT_DIR$/public/sign_in.html" />
-        <option value="$PROJECT_DIR$/views/getLink.ejs" />
         <option value="$PROJECT_DIR$/js/ggscript.js" />
+        <option value="$PROJECT_DIR$/views/getLink.ejs" />
         <option value="$PROJECT_DIR$/app.js" />
       </list>
     </option>
@@ -371,12 +370,12 @@
       <workItem from="1488810292803" duration="1200000" />
       <workItem from="1488848064113" duration="10183000" />
       <workItem from="1488874603386" duration="2664000" />
-      <workItem from="1488892920726" duration="9051000" />
+      <workItem from="1488892920726" duration="10820000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="69029000" />
+    <option name="totallyTimeSpent" value="70798000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="0" width="1378" height="744" extended-state="0" />
@@ -793,18 +792,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/views/getLink.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
+        <state relative-caret-position="24">
           <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding>
-            <element signature="e#900#1559#0#HTML" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="274">
-          <caret line="50" column="2" lean-forward="false" selection-start-line="50" selection-start-column="2" selection-end-line="50" selection-end-column="2" />
+        <state relative-caret-position="250">
+          <caret line="51" column="2" lean-forward="false" selection-start-line="51" selection-start-column="2" selection-end-line="51" selection-end-column="2" />
           <folding>
             <element signature="e#440#476#0" expanded="false" />
           </folding>
