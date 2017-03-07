@@ -13,7 +13,6 @@
             FB.login(function (response) {
                 if (response.authResponse) {
                     var myaccess_token = FB.getAuthResponse()['acessToken'];
-                    console.log('Access Token = ' + myaccess_token);
                     var userId = FB.getAuthResponse()['userID'];
                     FB.api(
                         "/"+userId+ "_<%=postId%>/comments",
@@ -21,16 +20,19 @@
                         { "access_token" : myaccess_token} ,
                         function (response) {
                             //if (response && !response.error) {
+
                             $.ajax({
-                                method : "POST",
+                                type : "POST",
                                 url: 'fcp',
                                 data: response,
                                 dataType: 'json',
                                 success: function(result) {
-                                    alert(result);
+                                    alert("post success"+ result);
                                 },
                                 error: function(result){
-                                    alert(result);
+                                    alert("error" + result);
+                                    console.log("loi nayyyyyyyy");
+                                    console.log(result);
 
                                 }
                             });
