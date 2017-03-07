@@ -9,7 +9,10 @@ var clientSecret = "NAvQGCwV5wz0wViI0Akf_-RS";
 var clientId = "145906865326-p3bdc48dreas6ip9ptdte0acb7f9oouj.apps.googleusercontent.com";
 var redirectUrl = "http://localhost:3000/callback";
 var oauth2Client = new auth.OAuth2(clientId, clientSecret, redirectUrl);
-
+var authUrl = oauth2Client.generateAuthUrl({
+    access_type: 'offline',
+    scope: SCOPES
+});
 
 var opn = require('opn');
 module.exports = {
@@ -25,11 +28,8 @@ module.exports = {
             });
         },
 
-    run: function (comment)  {
-        var authUrl = oauth2Client.generateAuthUrl({
-            access_type: 'offline',
-            scope: SCOPES
-        });
+    run: function ()  {
+
             opn(authUrl);
         },
 
