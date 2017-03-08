@@ -11,7 +11,6 @@ app.use(express.static('js'));
 app.use(express.static('public'));
 app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({extended: true}));
-
 app.get('/', function (req, res) {
     res.redirect('index.html');
 
@@ -36,7 +35,8 @@ app.get("/callback", function(req,res){
 // facebook cmt post
 app.post('/fcp', function (req, res) {
 
-    console.log(req.body.data);
+    console.log(req.body);
+    console.log("__________");
     var cmt = req.body.data;
     var len = req.body.data.length;
     var i=0;
@@ -48,7 +48,7 @@ app.post('/fcp', function (req, res) {
     google.run();
 })
 //process.env.PORT,process.env.IP
-app.listen(process.env.PORT,process.env.IP, function () {
-//app.listen(3000, function () {
+//app.listen(process.env.PORT,process.env.IP, function () {
+app.listen(3000, function () {
     console.log("OK!!");
 })
