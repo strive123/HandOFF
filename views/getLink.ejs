@@ -24,7 +24,7 @@
                                 type : "POST",
                                 url: 'fcp',
                                 //data: JSON.stringify(response),
-                                data: response,
+                                data: JSON.stringify(response),
                                 dataType: 'json',
                                 success: function(result) {
                                     alert("post success"+ result);
