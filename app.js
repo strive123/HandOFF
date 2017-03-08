@@ -48,7 +48,7 @@ app.post('/fcp', function (req, res) {
     google.run();
 })
 //process.env.PORT,process.env.IP
-//app.listen(process.env.PORT,process.env.IP, function () {
-app.listen(3000, function () {
+app.listen(process.env.PORT,process.env.IP, function () {
+//app.listen(3000, function () {
     console.log("OK!!");
 })

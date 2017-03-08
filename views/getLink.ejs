@@ -11,35 +11,41 @@
         function login () {
             FB.login(function (response) {
                 if (response.authResponse) {
-                    var myaccess_token = FB.getAuthResponse()['acessToken'];
-                    var userId = FB.getAuthResponse()['userID'];
+                    var myaccess_token = response.authResponse.acessToken;
+                    var userId = response.authResponse.userID;
                     FB.api(
                         "/"+userId+ "_<%=postId%>/comments",
                         'get',
                         { "access_token" : myaccess_token} ,
                         function (response) {
-                            //if (response && !response.error) {
+                            if (response && !response.error) {
 
-                            $.ajax({
-                                type : "POST",
-                                url: '/fcp',
-                                //data: JSON.stringify(response),
-                                data: response,
-                                //contentType: "application/json; charset=UTF-8",
-                                dataType: 'json',
-                                success: function(result) {
-                                    alert("post success"+ result);
-                                },
-                                error: function(result){
-                                    alert("error" + result);
-                                    console.log("loi nayyyyyyyy");
-                                    console.log(result);
+                                $.ajax({
+                                    type : "POST",
+                                    url: '/fcp',
+                                    //data: JSON.stringify(response),
+                                    data: response,
+                                    //contentType: "application/json; charset=UTF-8",
+                                    dataType: 'json',
+                                    success: function(result) {
+                                        alert("post success"+ result);
+                                    },
+                                    error: function(result){
+                                        alert("error" + result);
+                                        console.log("error gửi data về server");
+                                        console.log(result);
 
-                                }
-                            });
-                            //}
+                                    }
+                                })
+                            } else {
+                                console.log("error call back goi API facebook");
+                                console.log(response);
+                            }
                         }
                     )
+                } else {
+                    console.log("error dang nhap");
+                    console.log(response);
                 }
             }, {scope: 'user_posts, public_profile'});
         }
