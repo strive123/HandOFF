@@ -26,7 +26,6 @@ app.post('/fbags', function (req, res) {
 
 app.get("/callback", function(req,res){
     var code = req.query.code;
-    console.log(req);
     google.getNewToken(code,function(auth) {
         google.spreadsheet(auth, cmtArray, function (url) {
             //console.log(url);
@@ -36,8 +35,10 @@ app.get("/callback", function(req,res){
 })
 // facebook cmt post
 app.post('/fcp', function (req, res) {
+
+
     var cmt = req.body.data;
-    var len = req.body.data.lenght;
+    var len = req.body.data.length;
     var i=0;
     cmtArray = [];
     for (; i<len;i++){
