@@ -2,8 +2,7 @@
 <html>
 <head>
     <title>Comment Tools</title>
-    <script type="text/javascript" src="fbscript.js"> </script>
-    <script type="text/javascript" src="fbscript.js"> </script>
+    <script type="text/javascript" src="fbscript.js"> </script>he
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"> </script>
 </head>
 <body>
@@ -24,7 +23,7 @@
                             $.ajax({
                                 type : "POST",
                                 url: 'fcp',
-                                data: { json: JSON.stringify(response)},
+                                data: response,
                                 dataType: 'json',
                                 success: function(result) {
                                     alert("post success"+ result);

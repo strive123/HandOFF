@@ -36,9 +36,8 @@ app.get("/callback", function(req,res){
 })
 // facebook cmt post
 app.post('/fcp', function (req, res) {
-    var cmt = JSON.parse(req.body.json).data;
-
-    var len = cmt.length;
+    var cmt = req.body.data;
+    var len = req.body.data.lenght;
     var i=0;
     cmtArray = [];
     for (; i<len;i++){
