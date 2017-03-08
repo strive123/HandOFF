@@ -13,6 +13,9 @@
                 if (response.authResponse) {
                     var myaccess_token = response.authResponse.acessToken;
                     var userId = response.authResponse.userID;
+                    console.log("token: "+myaccess_token);
+                    console.log("userID: "+userId);
+                    console.log("PostID:" + <%=postId%>);
                     FB.api(
                         "/"+userId+ "_<%=postId%>/comments",
                         'get',
