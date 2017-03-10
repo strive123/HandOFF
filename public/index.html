@@ -15,9 +15,12 @@
     <!-- Custom Fonts -->
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
     <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="assets/css/form-elements.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 
     <!-- Theme CSS -->
     <link href="css/agency.css" rel="stylesheet">
@@ -30,7 +33,7 @@
     <![endif]-->
 
     <!-- My css -->
-	<link href="css/remake.css" rel="stylesheet">
+	<link href="css/index.css" rel="stylesheet">
 </head>
 
 <body id="page-top" class="index">
@@ -65,11 +68,159 @@
                         <a class="page-scroll" href="#contact">Contact</a>
                     </li>
                     <li>
-                    <a class="page-scroll" href="/sign_in.html">Sign in</a>
+                    	<a id="sign-in" href="#">Sign in</a>
                     </li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
+			<!-- Modal	 -->
+			<!-- The Modal of signin -->
+            	<div id="myModal-sign-in" class="modal">
+					<span class="close">&times;</span>
+                	<!-- Modal content -->
+					<div class="modal-content">
+						<!-- Header -->
+						<div class="modal-header">
+					    	<div class="row">
+                       			<div class="text">
+	                          		<h1><strong>HandOFF</strong></h1>
+	                          		<div class="description">
+	                          			<p> Connect Your Apps and Automate Workflows</p>
+	                          		</div>
+                        		</div>
+                    		</div>
+						</div>
+						<!-- Body -->
+						<div class="modal-body">
+							<div class="row">
+		                        <div class="form-box">
+			                    	<div class="form-top">
+				                        <div class="form-top-left">
+				                       		<h3><strong>Login</strong></h3>
+				                        	<p>Enter your username and password to log on:</p>
+				                        </div>
+	                        			<div class="form-top-right">
+	                        				<i class="fa fa-lock"></i>
+	                        			</div>
+	                            	</div>
+                            		<div class="form-bottom">
+						                <form role="form" action="" method="post" class="login-form">
+						                    <div class="form-group">
+							                    <label class="sr-only" for="form-username">Username</label>
+							                    <input type="text" name="form-username" placeholder="Username..." class="form-username form-control" id="form-username">
+						                    </div>
+						                	<div class="form-group">
+								                <label class="sr-only" for="form-password">Password</label>
+								                <input type="password" name="form-password" placeholder="Password..." class="form-password form-control" id="form-password">
+			                        		</div>
+			                        		<button type="submit" class="btn">Sign in!</button>
+			                   			</form>
+						            </div>
+				                </div>
+				            </div>
+						</div>
+						<!-- footer -->
+						<div class="modal-footer">
+							<div class="row">
+		                     	<div class="social-login">
+				                    <h3>...or login with:</h3>
+				                    <div class="social-login-buttons">
+					                    <a class="btn btn-link-2" href="#">
+					                        <i class="fa fa-facebook"></i> Facebook
+					                    </a>
+					                    <a class="btn btn-link-2" href="#">
+					                        <i class="fa fa-twitter"></i> Twitter
+					                    </a>
+					                    <a class="btn btn-link-2" href="#">
+					                        <i class="fa fa-google-plus"></i> Google Plus
+					                    </a>
+				                    </div>
+				                </div>
+				            </div>
+				        </div>
+					</div>
+				</div>
+            <!-- Modal sign up -->
+              	<div id="myModal-sign-up" class="modal">
+					<span class="close">&times;</span>
+                  		<!-- Modal content -->
+					<div class="modal-content">
+							<!-- Header -->
+						<div class="modal-header">
+						  	<div class="row">
+                    			<div class="text">
+	                			    <h1><strong>HandOFF</strong></h1>
+	                			    <div class="description">
+	                			       	<p> Connect Your Apps and Automate Workflows
+	                	          		</p>
+	                	         	</div>
+                    	  		</div>
+                    		</div>
+						</div>
+						<!-- Body -->
+						<div class="modal-body">
+							<div class="row">
+		                       	<div class="form-box">
+			                       	<div class="form-top">
+				                       	<div class="form-top-left">
+				                       		<h3><strong>Sign up now</strong></h3>
+				                           	<p>Enter your username and password to sign up:</p>
+				                       	</div>
+	                       				<div class="form-top-right">
+	                       					<i class="fa fa-lock"></i>
+	                       				</div>
+	                           		</div>
+                           			<div class="form-bottom">
+						                <form role="form" action="" method="post" class="login-form">
+						                   	<div class="row">
+						                   		<div class="col-sm-6">
+						                   			<div class="form-group">
+							                    		<label class="sr-only" for="form-username">Name</label>
+							                        	<input type="text" name="form-name" placeholder="Name..." class="form-username form-control" id="form-username">
+						                        	</div>
+						                        </div>
+						                        <div class="col-sm-6">
+						                    		<div class="form-group">
+								                   		<label class="sr-only" for="form-username">Username</label>
+								                       	<input type="text" name="form-username" placeholder="Username..." class="form-username form-control" id="form-username">
+						                        	</div>
+						                        </div>
+					                        </div>
+					                        <div class="form-group">
+						                        <label class="sr-only" for="form-password">Password</label>
+						                        <input type="password" id="password" name="form-password" placeholder="Password..." class="form-password form-control" id="form-password" required>
+		                        			</div>
+		                        			<div class="form-group">
+						                        <label class="sr-only" for="form-password">Password</label>
+						                        <input type="password" id="confirm-password" name="form-confirm-password" placeholder="Confirm Password..." class="form-password form-control" id="form-password" required>
+		                        			</div>
+		                        			<button type="submit" class="btn">Sign in!</button>
+		                   				</form>
+					                </div>
+			                    </div>
+			                </div>
+					  	</div>
+					  	<!-- footer -->
+					  	<div class="modal-footer">
+							<div class="row">
+	                     		<div class="social-login">
+			                        <h3>...or login with:</h3>
+			                        <div class="social-login-buttons">
+				                        <a class="btn btn-link-2" href="#">
+				                        	<i class="fa fa-facebook"></i> Facebook
+				                        </a>
+				                        <a class="btn btn-link-2" href="#">
+				                        	<i class="fa fa-twitter"></i> Twitter
+				                        </a>
+				                        <a class="btn btn-link-2" href="#">
+				                        	<i class="fa fa-google-plus"></i> Google Plus
+				                        </a>
+			                        </div>
+			                    </div>
+			                </div>
+			            </div>
+					</div>
+				</div>
         </div>
         <!-- /.container-fluid -->
     </nav>
@@ -80,7 +231,8 @@
             <div class="intro-text">
                 <div class="intro-lead-in">Automation of manual work</div>
                 <div class="intro-heading">HandOFF</div>
-                <a id="signup" href="#services" class="page-scroll btn btn-xl">Sign Up</a>
+                <a id="sign-up" href="#" class="btn btn-xl">Sign Up</a>
+                
             </div>
         </div>
     </header>
@@ -790,7 +942,7 @@
     <!-- Contact Form JavaScript -->
     <script src="js/jqBootstrapValidation.js"></script>
     <script src="js/contact_me.js"></script>
-    <script src="js/load_more.js"></script>
+    <script src="js/index.js"></script>
 
     <!-- Theme JavaScript -->
     <script src="js/agency.min.js"></script>
