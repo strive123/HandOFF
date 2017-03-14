@@ -52,16 +52,21 @@ module.exports = function(app, passport) {
 
 
     // process the signup form
-    app.post('/signup', passport.authenticate('local-signup', {
-        successRedirect : '/profile', // redirect to the secure profile section
-        failureRedirect : '/signup', // redirect back to the signup page if there is an error
-        failureFlash : true // allow flash messages
-    }));
+    app.post('/signup', function(req, res, next) {
+        passport.authenticate('local-signup', function(err, user, info) {
+            if (err) { return next(err); }
+            if (!user) { return res.render('index', {messagesSignUp: req.flash('signupMessage')}); }
+            req.logIn(user, function(err) {
+                if (err) { return next(err); }
+                return res.redirect('/');
+            });
+        })(req, res, next);
+    });
 
     app.post('/login', function(req, res, next) {
         passport.authenticate('local-login', function(err, user, info) {
             if (err) { return next(err); }
-            if (!user) { return res.render('index', {messages: req.flash('loginMessage')}); }
+            if (!user) { return res.render('index', {messagesLogin: req.flash('loginMessage')}); }
             req.logIn(user, function(err) {
                 if (err) { return next(err); }
                 return res.redirect('/');
