@@ -1,11 +1,11 @@
 $(document).ready(function () {
-    size_div = $(".portfolio-item").size();
+    size_div = $(".snip1174").size();
     x=6;
-    $('.portfolio-item:lt('+x+')').show();
+    $('.snip1174:lt('+x+')').show();
     $('#load-more').click(function () {
 
         x= (x+6 <= size_div) ? x+6 : size_div;
-        $('.portfolio-item:lt('+x+')').fadeIn(1500);
+        $('.snip1174:lt('+x+')').fadeIn(1500);
         if (x == size_div) {
         	$(this).remove();
         };
