@@ -24,9 +24,6 @@ app.use(cookieParser());
 app.use(require('less-middleware')(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', index);
-app.use('/users', users);
-app.use('/api', api);
 
 
 
@@ -56,6 +53,9 @@ require('./routes/authentication')(app, passport); // load our routes and pass i
 // end innit
 
 
+app.use('/', index);
+app.use('/users', users);
+app.use('/api', api);
 
 
 // catch 404 and forward to error handler
