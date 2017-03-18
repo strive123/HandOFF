@@ -157,13 +157,6 @@ module.exports = function(passport) {
 
         // facebook will send back the token and profile
         function(token, refreshToken, profile, done) {
-            console.log("____________________");
-            console.log(profile);
-            console.log("____________________");
-            console.log(token);
-            console.log("____________________");
-            console.log(refreshToken);
-            console.log("____________________");
             // asynchronous
             process.nextTick(function() {
 
@@ -174,9 +167,6 @@ module.exports = function(passport) {
                     // ie an error connecting to the database
                     if (err)
                         return done(err);
-                    console.log("__________");
-                    console.log(user);
-                    console.log("____________");
 
                     // if the user is found, then log them in
                     if (user) {

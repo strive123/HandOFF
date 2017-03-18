@@ -7,8 +7,38 @@ const qs    = require('querystring');
 var request = require('request');
 
 
+
+router.get('/facebook/callback', function (req,res) {
+    console.log("ok");
+    console.log("________________");
+    request('https://graph.facebook.com/v2.8/oauth/access_token?'+
+        'client_id=1228873080533218'+
+        '&redirect_uri=http://localhost:3000/api/facebook/callback'+
+        '&client_secret=594d36c47a61140738c0b39212be34b0' +
+        '&code='+req.query.code, function(err, res, body){
+        console.log(body);
+    });
+
+})
+
 router.get('/getphonenumber', function (req, res) {
-    res.render('getphonenumber', {user:req.user});
+    if (typeof req.user !== "undefined") {
+        if (typeof req.user.facebook !== "undefined"){
+            res.render('getphonenumber');}
+    } else {
+        request('https://www.facebook.com/v2.8/dialog/oauth?' +
+            'client_id=1228873080533218' +
+            '&redirect_uri=http://localhost:3000/api/facebook/callback'+
+            '&scope=public_profile',  function (err, res, body) {
+                if (err) {
+                    console.log("fuck", err)
+                }
+
+                console.log("vo toi day", res, body);
+            }
+        );
+        res.end("ok")
+    }
 })
 
 router.post('/getphonenumber', function (req, res) {
