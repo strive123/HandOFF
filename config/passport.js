@@ -198,6 +198,35 @@ module.exports = function(passport) {
     );
 
 
+
+    passport.use('facebookplus', new FacebookStrategy({
+
+            // pull in our app id and secret from our auth.js file
+            clientID        : configAuth.facebookAuth.clientID,
+            clientSecret    : configAuth.facebookAuth.clientSecret,
+            callbackURL     : configAuth.facebookAuth.plus,
+            profileFields: ['id', 'email', 'gender', 'link', 'locale', 'name', 'timezone', 'updated_time', 'verified'],
+            passReqToCallback : true
+        },
+
+        // facebook will send back the token and profile
+        function(req, token, refreshToken, profile, done) {
+        console.log(req.user);
+            User.update({'_id': req.user._id}, {
+                'facebook.id': profile.id, // set the users facebook id
+                'facebook.token': token, // we will save the token that facebook provides to the user
+                'facebook.name': profile.name.givenName + ' ' + profile.name.familyName, // look at the passport user profile to see how names are returned
+                'facebook.email': profile.emails[0].value // facebook can return multiple emails so we'll take the first
+        },function (err, num, raw) {
+                if (err) {
+                    console.log(err);
+                }
+                return done(null, req.user);
+            })
+        }))
+
+
+
     // =========================================================================
     // GOOGLE ==================================================================
     // =========================================================================
