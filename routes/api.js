@@ -13,7 +13,7 @@ router.get('/facebook/callback', function (req,res) {
     console.log("________________");
     request('https://graph.facebook.com/v2.8/oauth/access_token?'+
         'client_id=1228873080533218'+
-        '&redirect_uri=http://localhost:3000/api/facebook/callback'+
+        '&redirect_uri=https://obscure-lowlands-40418.herokuapp.com/api/facebook/callback'+
         '&client_secret=594d36c47a61140738c0b39212be34b0' +
         '&code='+req.query.code, function(err, res, body){
         console.log(body);
@@ -28,16 +28,16 @@ router.get('/getphonenumber', function (req, res) {
     } else {
         request('https://www.facebook.com/v2.8/dialog/oauth?' +
             'client_id=1228873080533218' +
-            '&redirect_uri=http://localhost:3000/api/facebook/callback'+
+            '&redirect_uri=https://obscure-lowlands-40418.herokuapp.com/api/facebook/callback'+
             '&scope=public_profile',  function (err, res, body) {
                 if (err) {
                     console.log("fuck", err)
                 }
 
-                console.log("vo toi day", res, body);
+                console.log("vo toi day");
+                console.log(res.header);
             }
         );
-        res.end("ok")
     }
 })
 
