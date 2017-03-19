@@ -160,10 +160,13 @@ figure.snip1174 p {
   padding: 0;
 }
 figure.snip1174 h2 {
-  margin-bottom: 10px;
-  display: inline-block;
-  font-weight: 100;
-  font-size: 1.8em;
+    /*font-family: 'Baloo Bhaina', cursive;*/
+    font-family: 'Baloo Paaji', cursive;
+    margin-bottom: 10px;
+    display: inline-block;
+    /*font-weight: 150;*/
+    font-size: 2em;
+    color: white;
 }
 figure.snip1174 p {
   font-weight: 300;
@@ -171,6 +174,7 @@ figure.snip1174 p {
   line-height: 1.4em;
 }
 figure.snip1174 a {
+    font-family: 'Arimo', sans-serif;
   display: inline-block;
   padding: 10px 20px;
   border: 1px solid #ffffff;
